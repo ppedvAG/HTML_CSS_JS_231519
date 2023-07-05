@@ -1,0 +1,21 @@
+/* Element-Selektor */
+p {
+    color: black;
+}
+
+/* Universal-Selektor */
+* {
+    color: yellow;
+}
+
+/* ID-Selektor */
+#site-top {
+    font-size: 42px;
+    color: aquamarine;
+}
+
+/* Klassen-Selektor */
+.cool-paragraph {
+    color: slategray;
+    font-size: 36px;
+}
