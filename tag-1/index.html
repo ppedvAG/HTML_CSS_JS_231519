@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--
+    <tagname> Inhalt </tagname>
+    Tagnamen sind nicht case-sensitive
+    Konvetion ist es aber die tagnamen klein zu schreiben
+    Tags sind verschachtelbar
+
+    html:5 => Tab drücken
+    Generiert uns doctype + html + head und body
+-->
+<html>
+<head>
+    <!--
+        Der head enthält Metainformationen über unsere Seite, wie z.B den Titel, Stylesheets und
+        Skripte
+    -->
+    <meta charset="UTF-8">
+    <!-- Weist den Browser welche encodierung verwendet werden soll -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- dieser meta-Tag stellt die Breite des Dokuments auf die breite des genutzten
+         Gerätes/Browsers ein und definiert den anfänglichen Zoom-Faktor -->
+
+    <title>Meine erste HTML Seite öäü</title>
+</head>
+<body>
+    <!-- 
+        Der body enthält den tatsächlich sichtbaren Inhalt unserer Seite
+        Darf nur einmal pro HTML dokument vorkommen
+    -->
+    <div>
+        <!--
+            Steht für division, also eine Unterteilung
+            Benutzt man um die Seite in einzelne Bereiche aufzugliedern, z.B 
+            Navigationsleiste und den tatsächlichen Inhalt
+        -->
+
+        <ul>
+            <!-- Steht für ungeordnete liste und wird standardmäßig als Liste mit
+                 Aufzählungspunkten dargestellt 
+                 Enthält immer nur li-Elemente oder weitere ul-Elemente
+                -->
+            <li>
+                <!-- Steht für list-item und ist ein Aufzählungspunkt -->
+                <!-- Im Falle einer Navigationsleiste enthält das list item anchor-Tags -->
+                <a href="#">Home</a>
+                <!--
+                    Ein Anchor-Tag verlinkt immer auf eine andere Seite, kann sowohl auf unserer
+                    eigenen Website sein oder auf eine adnere Domain, z.b wikipedia.de
+                    Der a-Tag muss über das href-Attribut verfügen
+                -->
+            </li>
+            <li>
+                <a href="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite" target="_blank">externe Seite</a>
+                <!-- Bei externen Seiten muss mit absolutem Pfad garbeitet werden -->
+            </li>
+            <li>
+                <a href="/tag-1/aboutme.html">Interne Seite</a>
+                <!-- Bei internen Seiten reicht der relative Pfad -->
+            </li>
+        </ul>
+
+    </div>
+
+    <div>
+        <h1>Ich bin die Hauptüberschrift der Seite</h1>
+        <!-- Sie werden immer fett geschrieben und je nach Zahl unterschiedlich groß geschrieben -->
+        <h6>Ich bin eine der unwichtigsten Überschriften</h6>
+
+        <p style="background-color: aquamarine;">Ich bin paragraph</p>
+        <span style="background-color: blanchedalmond;">Ich bin eine Zeichenfolge </span>
+        <p>Unterschied zwischen p-Tag und span-Tag ist die Darstellung
+            der p-Tag erzwingt immer eine neue Zeile, weil er standardmäßig eine ganze Zeile
+            an Platz beansprucht.
+        </p>
+        <span>Der span-Tag verbraucht nur soviel Platz wie er tatsächlich beansprucht</span>
+        <p>Unnötige Leerzeichen werden gelöscht          asuhe      asdeoj</p>
+        <span>Test       wasd    fdsf</span>
+
+        <h3>Ausnahme:</h3>
+        <pre>Hier ist die Formatierung      so    wie
+
+            wir
+                     das sehen 
+            können
+        </pre>
+
+        <h3 title="Tooltip">Kleines Gimmick:</h3>
+        <p title="Ich bin ein Tooltip">Man kann bei allen Elementen Tooltips mit dem title-Attribut 
+            darstellen, also hover über mich
+        </p>
+
+        <h3>Styling von Text mittels HTML:</h3>
+        <p><strong>Um text fett darzustellen haben wir den strong-Tag</strong> und <em>Um Text kursiv darzustellen</em></p>
+        <p>Früher wurde statt den Tags ein b-Tag und i-Tag </p>
+        <p>Im Gegensatz zum b und i Tag werden strong und em-Tag von Screenreadern besonders betont.</p>
+
+        <p>Der i-Tag wird heutzutage oft als icon-Tag verwendet</p>
+
+        <h3>Weitere nützliche Textelemente:</h3>
+
+        <p>Zitate:</p>
+        <blockquote>Ich bin für längere Zitate gedacht</blockquote>
+        <q>Ich bin für kurze Zitate</q>
+
+        <p>Abkürzung:</p>
+        <abbr title="Hyper Text markup Langugage">HTML</abbr>
+
+        <p>Titel und ähnliches:</p>
+        <cite>Ich bin ein Buch/Filmtitel</cite>
+
+        <p>Adressen:</p>
+        <address>1000 Musterstadt</address>
+
+        <p>Sub-/Superskript:</p>
+        <p>Für Hochzahlen:</p>
+        <p>2 <sup>4</sup></p>
+        <p>Für Fußnoten</p>
+        <p>Quelle <sub>Fußnote</sub></p>
+
+        <p>Rechtliche Hinweise:</p>
+        <small>Ich werde kleiner dargestellt als normaler Text</small>
+
+        <p>Farbliche Markierung:</p>
+        <mark>Ich werde gelb hinterlegt</mark>
+
+
+    </div>
+    
+    <div>
+
+            <h2>Listen in HTML</h2> 
+            <h3>die ungeordnete Liste</h3>
+
+            <ul>
+                <li>ABC</li>
+                <li>DEF</li>
+                <li>XYZ
+                    <ul>
+                        <li>Unterpunkt</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Die geordnete Liste</h3>
+            <p>Dient ebenfalls der Auflistung, diesmald allerdings von Einzelschritten oder von 
+                Rankings
+            </p>
+
+            <ol>
+                <li>Mehl</li>
+                <li>Eier</li>
+                <li>Milch</li>
+                <li>Getränke
+                    <ol>
+                        <li>Cola
+                            <ol>
+                                <li>Light</li>
+                                <li>Zero</li>
+                            </ol>
+                        </li>
+                        <li>Wasser
+                            <ol>
+                                <li>Still</li>
+                                <li>Spritzig</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h4>Die Attribute des ol-Elements</h4>
+            <ol>
+                <li>type</li>
+                <li>start</li>
+                <li>reversed</li>
+            </ol>
+
+            <p>Type:</p>
+            <ol type="a">
+                <li>A</li>
+                <li>B</li>
+            </ol>
+
+            <p>Mögliche Werte für type:</p>
+            <ul>
+                <li>A - Zählt mit Großbuchstaben durch</li>
+                <li>a - Zählt mit Kleinbuchstaben durch</li>
+                <li>I - Zählt mit großgeschriebenen römischen Zahlen durch</li>
+                <li>i - Zählt mit kleingeschriebenen römischen Zahlen durch</li>
+                <li>1 - Zählt mit arabischen Ziffern durch, ist standard</li>
+            </ul>
+
+            <p>Start:</p>
+            <p>Sagt wo das Zählen beginnen soll</p>
+            <ol type="1" start="54">
+                <li>A</li>
+                <li>B</li>
+            </ol>
+
+            <ol>Reversed:</ol>
+            <p>Ist ein boolesches Attribut, also ein Attribut das nur Wahr oder Falsch sein kann</p>
+            <ol type="1" start="54" reversed>
+                <li>A</li>
+                <li>B</li>
+            </ol>
+
+        </div>
+        <div>
+            <h2>Tabellen in HTML</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Produkt</th>
+                        <th scope="col">Anzahl</th>
+                        <th scope="col">Stückpreis</th>
+                        <th scope="col">Gesamtpreis</th>
+                        <!-- 
+                            Das scope-Attribut definiert ob die Überschrift für eine Spalte oder
+                            eine Zeile gilt
+
+                            Mögliche werte:
+                            col
+                            row
+
+                            Richtet sich an Screenreader
+                        -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Laptop</th>
+                        <td>5</td>
+                        <td>1.500€</td>
+                        <td>7.500€</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Monitor</th>
+                        <td>5</td>
+                        <td>200€</td>
+                        <td>1.000€</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Preis insgesamt: </th>
+                        <!--
+                            colspan Attribut
+                            Gibt an über wie viele Spalten sich unser Element erstrecken soll
+                        -->
+                        <td>8.500€</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+
+        <div>
+            <h2>Links in HTML</h2>
+            <p>Um Links darzustellen benutzen wir den anchor-Tags</p>
+            <p>Ein häufig benutztes Attribut für den a-Tag ist das target-Attribut</p>
+            <p>Mit dem target-Attribut können wir den Browser anweisen den Link in einem neuen Tab 
+                zu öffnen
+            </p>
+            <p>Dafür benutzen wir target="_blank"</p>
+            <a href="https://ppedv.de" target="_blank">PPEDV</a>
+        </div>
+
+        <div>
+            <h2>Bilder in HTML</h2>
+
+            <!-- Veraltete Variante -->
+            <img src="https://via.placeholder.com/250x250" alt="Platzhalterbild">
+
+            <!-- Moderne Variante -->
+            <picture>
+                <source media="(min-width: 750px)" srcset="https://via.placeholder.com/750x750">
+                <source media="(min-width: 450px)" srcset="https://via.placeholder.com/450x450">
+                <img src="https://via.placeholder.com/250x250" alt="Platzhalterbild">
+            </picture>
+        </div>
+</body>
+</html>
